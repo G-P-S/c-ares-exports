@@ -1,5 +1,6 @@
 # c-ares-exports
 prebuilt binaries for c-ares library
+c-ares version 1.10.1
 
 ## osx-x64-release
 ```
