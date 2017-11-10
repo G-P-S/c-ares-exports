@@ -1,7 +1,7 @@
 # c-ares-exports
 prebuilt binaries for c-ares library
 c-ares version 1.10.1
-
+repo: https://github.com/c-ares/c-ares.git 
 ## osx-x64-release
 ```
 ./buildconf
@@ -115,3 +115,18 @@ make
 make install
 ```
 
+## linux-arm-a53-release
+```
+./buildconf
+CC=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-gcc LD=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ld CXX=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-g++ CXXLD=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ld STRIP=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-strip AR=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ar AS=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-as NM=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-nm RANLIB=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ranlib CXXLD=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ld  OBJDUMP=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-objdump ./configure --host=arm-oemllib32-linux-gnueabi --target=arm-oemllib32-linux-gnueabi --prefix=`pwd`/../c-ares-exports/linux-arm-a53-release --disable-debug --enable-optimize=O3 CFLAGS="-fPIC --sysroot=/opt/tas_sdk/sysroots" --with-sysroot=/opt/tas_sdk/sysroots
+make
+make install
+```
+
+## linux-arm-a53-debug
+```
+./buildconf
+CC=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-gcc LD=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ld CXX=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-g++ CXXLD=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ld STRIP=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-strip AR=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ar AS=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-as NM=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-nm RANLIB=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ranlib CXXLD=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-ld  OBJDUMP=/opt/tas_sdk/sysroots/x86_64-linux/usr/bin/arm-oemllib32-linux-gnueabi/arm-oemllib32-linux-gnueabi-objdump ./configure --host=arm-oemllib32-linux-gnueabi --target=arm-oemllib32-linux-gnueabi  --prefix=`pwd`/../c-ares-exports/linux-arm-a53-debug --enable-debug CFLAGS="-fPIC --sysroot=/opt/tas_sdk/sysroots" --with-sysroot=/opt/tas_sdk/sysroots
+make
+make install
+```
